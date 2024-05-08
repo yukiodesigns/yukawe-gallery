@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Progress from './Progress'
 
 const Upload = () => {
     const [file, setFile] = useState(null)
@@ -24,6 +25,7 @@ const Upload = () => {
         </label>
         <div className='output'>
             {file && <div>{file.name} </div>}
+            {file && <Progress file={file} setFile={setFile} />}
         </div>
     </form>
   )
